@@ -1,0 +1,68 @@
+.hamburger_wrapper {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 5rem;
+  left: 25px;
+}
+@media only screen and (max-width:900px) {
+  .hamburger_wrapper {
+    display: flex;
+  }
+}
+.ham {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 400ms;
+    margin-bottom: -30px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .hamRotate.active {
+    transform: rotate(45deg);
+  }
+
+.line {
+    fill:none;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke:turquoise;
+    stroke-width:7;
+    stroke-linecap:round;
+}
+
+.ham8 .top {
+    stroke-dasharray: 40 160;
+  }
+
+.ham8 .middle {
+    stroke-dasharray: 40 142;
+    transform-origin: 50%;
+    transition: transform 400ms;
+  }
+
+.ham8 .bottom {
+    stroke-dasharray: 40 85;
+    transform-origin: 50%;
+    transition: transform 400ms, stroke-dashoffset 400ms;
+  }
+
+.ham8.active .top {
+    stroke-dashoffset: -64px;
+  }
+
+.ham8.active .middle {
+    //stroke-dashoffset: -20px;
+    transform: rotate(90deg);
+  }
+
+.ham8.active .bottom {
+    stroke-dashoffset: -64px;
+  }
+
+.paragraph {
+  margin-bottom: -27px;
+}

@@ -1,0 +1,44 @@
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 150px;
+}
+
+.scale-button {
+    position: relative;
+    padding: 1.2rem 2.4rem;
+    font-size: 1.1rem;
+    background: none;
+    border: 2px solid #4207f2;
+    border-radius: 8px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.scale-text {
+    position: relative;
+    z-index: 1;
+    transition: color 0.3s ease;
+}
+
+.scale-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #4207f2;
+    transform: scale(0);
+    transition: all 0.3s ease;
+    z-index: 0;
+}
+
+.scale-button:hover .scale-bg {
+    transform: scale(1);
+    
+}
+
+.scale-button:hover {
+    color: white;
+}

@@ -1,3 +1,8 @@
+import ElegantBtn from '@/components/buttons/elegant-btn'
+import SideBar from '@/components/side-bar/side-bar'
+import Ticker from '@/components/ticker-slider/ticker'
+import {ModeToggle } from '@/components/mode-toggle'
+import  { ThemeProvider } from "@/components/theme-provider";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -24,11 +29,30 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning={true}>
+      <head />
+
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+      <ThemeProvider
+        attribute="class"
+        defaultTheme="system"
+        enableSystem
+        disableTransitionOnChange
+      >
+      <div className='dark:text-white bg-white [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#63e_100%)] text-black dark:[background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]'>
+        <ModeToggle />
+        <Ticker />
+          {children}
+      </div>
+      </ThemeProvider>
+      <SideBar>
+        <ElegantBtn />
+        <ElegantBtn />
+        <ElegantBtn />
+        <ElegantBtn />
+      </SideBar>
       </body>
     </html>
   );
