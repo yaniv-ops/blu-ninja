@@ -16,7 +16,7 @@ const SideBar = ({children}) => {
 
     return (
     <div onClick={toggleHamburger}>
-        <div className={`${styles.side_bar} ${hamStatus && styles.is_open}`}>
+        <div className={`${styles.side_bar} ${hamStatus && styles.is_open} background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#63e_100%) dark:text-white bg-white dark:bg-black text-black dark:[background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]`}>
             <div className={styles.side_bar_menu}>
                 {children}
             </div>

@@ -18,7 +18,7 @@ const Ticker = () => {
             </div>
             })}
             <div className={classes.ticker_item}>
-                ברוכות השבות לביאות
+                טוב שבאתם הביתה
             </div>
             <div className={classes.ticker_item}>
                 !!!

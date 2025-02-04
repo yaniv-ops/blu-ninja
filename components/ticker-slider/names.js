@@ -13,6 +13,26 @@ export const names = [
     },
     {
     name:'לירי אלבג',
-    image:'romi.jpg'    
+    image:'liri.jpg'    
+    },
+    {
+        name:"קית' סיגל",
+        image:'keith.jpg'
+    },
+    {
+        name:'ארבל יהוד',
+        image:'arbel.jpg'
+    },
+    {
+        name:'גדי מוזס',
+        image:'gadi.jpg'
+    },
+    {
+        name:'עופר קלדרון',
+        image:'ofer.jpg'
+    },
+    {
+        name:'ירדן ביבס',
+        image:'yarden.jpg'
     }
 ]
