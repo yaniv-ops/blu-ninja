@@ -34,5 +34,17 @@ export const names = [
     {
         name:'ירדן ביבס',
         image:'yarden.jpg'
+    },
+    {
+        name:'נעמה לוי',
+        image:'naama.jpg'
+    },
+    {
+        name:'דניאלה גלבוע',
+        image:'daniella.jpg'
+    },
+    {
+        name:'קארינה ארייב',
+        image:'karina.jpg'
     }
 ]
