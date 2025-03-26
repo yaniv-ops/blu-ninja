@@ -1,28 +1,32 @@
-import {names} from './names.js'
+import {fetchWeather} from '@/components/weather'
+import TickerItem from './ticker-item'
 import classes from './ticker.module.css'
 import React from 'react'
 
-const Ticker = () => {
-  return (
+const Ticker = async () => {
+  
+    const result = await fetchWeather()
+    const forecast = result.forecast
+  
+    return (
     
     <div className={classes.ticker_wrapper}>
         <div className={classes.ticker}>
-            <div className={classes.ticker_item}>
+            <TickerItem>
                 <img src={`/Logo.png`} alt='person'  className={classes.image} />
-                <span>בלו-נינג&#39;ה ועם ישראל מברכים את :</span>
-            </div>
-            {names.map((name,index)=>{
-            return <div className={classes.ticker_item} key={index}>
-                <span>{name.name}</span>
-                <img src={`/${name.image}`} alt='person'  className={classes.image} />
-            </div>
+                <span>התחזית המעודכנת לתאריך : </span>
+                <span className={classes.date}> {result.date} </span>
+            </TickerItem>
+            <TickerItem>
+                <span>לשעה : </span>
+                <span className={classes.date}> {result.hour} </span>
+            </TickerItem>
+            {forecast.map((name,index)=>{
+            return <TickerItem key={index}>
+                <span>{name.city} : </span>
+                <span>{name.temperature}</span>
+            </TickerItem>
             })}
-            <div className={classes.ticker_item}>
-                טוב שבאתם הביתה
-            </div>
-            <div className={classes.ticker_item}>
-                !!!
-            </div>
         </div>
     </div>
   )

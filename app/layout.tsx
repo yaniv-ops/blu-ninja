@@ -1,11 +1,12 @@
 import ElegantBtn from '@/components/buttons/elegant-btn'
 import SideBar from '@/components/side-bar/side-bar'
-import Ticker from '@/components/ticker-slider/ticker'
 import {ModeToggle } from '@/components/mode-toggle'
 import  { ThemeProvider } from "@/components/theme-provider";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import IntroPage from '@/components/intro-page/intro-page';
+
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -30,11 +31,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning={true}>
-      <head />
-
+      <head/>
+      
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+      <IntroPage />
       <ThemeProvider
         attribute="class"
         defaultTheme="system"
@@ -43,7 +45,6 @@ export default function RootLayout({
       >
       <div className='dark:text-white dark:bg-black text-black'>
         <ModeToggle />
-        <Ticker />
           {children}
       </div>
       </ThemeProvider>
