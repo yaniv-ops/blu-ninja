@@ -21,7 +21,7 @@ const Ticker = async () => {
                 <span>לשעה : </span>
                 <span className={classes.date}> {result.hour} </span>
             </TickerItem>
-            {forecast.map((name,index)=>{
+            {forecast?.map((name,index)=>{
             return <TickerItem key={index}>
                 <span>{name.city} : </span>
                 <span>{name.temperature}</span>
