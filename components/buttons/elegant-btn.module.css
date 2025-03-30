@@ -3,6 +3,8 @@
     justify-content: center;
     align-items: center;
     min-height: 100px;
+    width: 10rem;
+    
 }
 
 .slide-button {
@@ -15,6 +17,8 @@
     border-radius: 8px;
     cursor: pointer;
     overflow: hidden;
+    width: 100%;
+    
 }
 
 .slide-content {

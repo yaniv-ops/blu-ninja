@@ -49,10 +49,10 @@ export default function RootLayout({
       </div>
       </ThemeProvider>
       <SideBar>
-        <ElegantBtn />
-        <ElegantBtn />
-        <ElegantBtn />
-        <ElegantBtn />
+        <ElegantBtn name={"בית"}/>
+        <ElegantBtn name={"בונה האתרים"}/>
+        <ElegantBtn name={"בית"}/>
+        <ElegantBtn name={"בית"}/>
       </SideBar>
       </body>
     </html>

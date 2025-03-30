@@ -24,7 +24,8 @@ const Ticker = async () => {
             {forecast?.map((name,index)=>{
             return <TickerItem key={index}>
                 <span>{name.city} : </span>
-                <span>{name.temperature}</span>
+                <span>{name.temperature}&deg;</span>
+                <span style={{verticalAlign: "text-bottom",fontSize:"1.6rem"}}>c</span>
             </TickerItem>
             })}
         </div>
