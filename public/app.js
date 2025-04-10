@@ -2,8 +2,10 @@ function loopChar(id) {
     let textElementOne = document.querySelector(id);
     let textContentOne = textElementOne.textContent;
     textElementOne.innerHTML = '';
+   
     for (let char of textContentOne) {
-        let span = document.createElement('span');
+        let span;
+        span = document.createElement('span');
         span.textContent = char;
         textElementOne.appendChild(span);
     }

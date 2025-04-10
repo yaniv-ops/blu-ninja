@@ -22,9 +22,6 @@
 }
 
 .slide-content {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
     position: relative;
     z-index: 1;
 }
